@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<template id="post-template" style="display:flex; align-items: center">
+    <div class="post-preview justify-content-center">
+        <h3 class = "post-title"></h3>
+        <p class = "post-content"></p>
+        <p class="post-meta">
+            Posted by
+            <a href="#!">Sam Moore</a>
+            on December 20th, 2022
+        </p>
+        <hr class = "my-4"><hr>
+    </div>
+</template>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>NBA Fan-Forum</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+
+
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="index.html">NBA Fan Forum</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="teams.html">Teams</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="players.html">Statistics</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="login.html">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page Header-->
+        <header class="masthead" style= "background-image: url('assets/img/nbacourt.jpg');">
+            <div class="container-fluid position-relative px-1 px-lg-1">
+                <div class="row gx-lg-1 gx-lg-1 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Welcome to NBA Fan Forum</h1>
+                            <span class="subheading">Your home of Basketball</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT--->
+        <div id="main-content" class="container-fluid">
+            <div class="row">
+                <!--MAIN CONTENT-LEFT-->
+                <div class="col-sm-2">
+                  <h2 id="welcome"> Welcome... </h2>
+                </div>
+                      
+                <!--MAIN CONTENT CENTER-->
+                <div class="col-sm-8 border rounded">
+                    <div class="row">
+                        <div class="createPost">
+                            <h3 class="mini-headign">Create Post</h3>
+                                    <div class="post-text">
+                                    <input type="text-area" name="title" placeholder="Post title goes here..." id = "post-title" value="">
+                                    
+        
+                                </div>
+                                <div class="post-text">
+                                    <input type="text-area" name="title" placeholder="What's on your mind..." id = "post-content" value="">
+                                    
+        
+                                </div>
+                                <div class="row post-icon">
+                                    <div class="col-sm-8">  
+                                        <a href="#" style="background: #ffebed;">
+                                        <i class="fa-solid fa-camera"></i>
+                                        Gallery</a>
+
+                                        <a href="#" style="background: #ccdcff;">
+                                        <i class="fa-solid fa-video"></i>
+                                        Video</a>
+
+                                        <a href="#" style="background: #d7ffef;">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        Location</a>
+
+                                        <a href="#" style="background: #cff3ff;">
+                                        <i  class="fa-solid fa-gift"></i>
+                                        Gift</a>
+                                    
+                                        <a href="#" style="background: #fff4d1;">
+                                        <i class="fa-solid fa-face-grin-beam"></i>
+                                        Feeling</a>
+                                    </div>                           
+                                    <div class="col-sm-2">
+                                        <button onclick="addPostItem()" class="btn btn-primary text-uppercase" style= "color: white;">Create Post →</button>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="justify-center post-preview">
+                            <div id="post-list"></div>
+                        </div>
+      
+                </div>
+
+                <!--MAIN CONTENT RIGHT-->
+                <div class="col-sm-2">
+                  
+                </div>
+              </div>
+            </div>
+
+
+
+        <!-- Footer-->
+        <footer class="border-top">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#!">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fas fa-circle fa-stack-2x"></i>
+                                        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="small text-center text-muted fst-italic">Copyright &copy; NBA Forum 2022</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- Core theme JS-->
+     
+        <!-- <script src="js/scripts.js"></script> -->
+        <script>
+            let post = [
+        {id: 1, title: 'JOKIC, MITCHELL NAMED PLAYERS OF THE WEEK', content:"Denver's 2-time Kia MVP and Cleveland's All-Star guard take home the honors for Week 9."},
+        {id: 2, title: 'LILLARD PASSES DREXLER AS BLAZERS SCORING LEADER', content:"Lillard, 32, is the only player in franchise history with six All-NBA honors"},
+        {id: 3, title: 'JOKIC DROPS 40 PTS, 27 REB and 10 AST, WHILST EMBIID CONTINUES TO STRUGGLE', content:"Jokic created a stat line yesterday to rival the great Wilt Chamberlain, whilst Embiid and the 76ers continue to struggle this season."}
+    ];
+
+    function addPostItem() {
+        let postTitle = document.getElementById('post-title').value 
+        let postContent = document.getElementById('post-content').value
+        let postItem = {id: post.length+1, title: postTitle, content: postContent}
+
+        post.unshift(postItem)
+    }
+    
+    function addPostItems() {
+        console.log('refreshing news items')
+        document.getElementById('post-list').innerHTML = '';
+
+        post.forEach((postItem) => {
+            const template = document.getElementById("post-template").content.cloneNode(true);
+            template.querySelector('.post-title').innerText = postItem.title;
+            template.querySelector('.post-content').innerText = postItem.content;
+            document.querySelector('#post-list').appendChild(template);
+        });
+    }
+
+const intervalTimer = setInterval(addPostItems, 1000)
+
+
+let user6 = window.localStorage.getItem('username')
+       console.log(user6)
+
+       document.getElementById('welcome').innerHTML = "Welcome Back "+user6+"...";
+    
+    
+        </script>
+    </body>
+</html>

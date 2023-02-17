@@ -6,7 +6,8 @@ const Leagues = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        axios('https://www.balldontlie.io/api/v1/teams')
+        axios('/api/games')
+        // axios('https://www.balldontlie.io/api/v1/teams')
         .then((res) => {
             console.log(res.data.data)
         })

@@ -1,11 +1,11 @@
-import StandingsTable from "../components/StandingsTable"
+import Table from "../components/Table"
 
 function Home(){
 return(
     <div>
-        <h1> This is the home page </h1>
+        <h1> This is the Home page </h1>
         
-        <StandingsTable />
+        <Table />
     </div>
     )
 }

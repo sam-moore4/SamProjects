@@ -79,3 +79,28 @@
   height: 50px;
   border: solid;
 }
+
+.games-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  text-align: center;
+}
+
+.games-div{
+  margin: 20px 0;
+}
+
+.games-div:hover{
+  transform: scale(1.1);
+
+}
+
+select{
+  padding: 10px;
+  font-size: 19px;
+  border-radius: 10px;
+  margin: 10px;
+}
+

@@ -1,27 +1,27 @@
-import React, {useState} from 'react';
-import BasicCard from "../components/Posts"
-import PlayerList from "../components/PlayerList"
-import PostForm from "../components/PostForm"
-import {players} from "../components/PlayerList"
-// import DisplayPost from "../components/DisplayPost"
+// import React, {useState} from 'react';
+// import BasicCard from "../components/Posts"
+// import PlayerList from "../components/PlayerList"
+// import PostForm from "../components/PostForm"
+
+// // import DisplayPost from "../components/DisplayPost"
 
 
-function Collection(){
+// function Collection(){
 
-    const [arr, setArr] = useState(players)
+//     const [arr, setArr] = useState(players)
 
-    return(
-        <div>
-            <h1> Add a Player</h1>
-            <PostForm updatePlayers={setArr} currentPlayers={arr}/>
-            <h1> Current players </h1>
-            <PlayerList currentPlayers={arr}/>
+//     return(
+//         <div>
+//             <h1> Add a Player</h1>
+//             <PostForm updatePlayers={setArr} currentPlayers={arr}/>
+//             <h1> Current players </h1>
+//             <PlayerList currentPlayers={arr}/>
 
-            {/* <DisplayPost /> */}
+//             {/* <DisplayPost /> */}
 
-            <BasicCard />
-        </div>
-        )
-    }
+//             <BasicCard />
+//         </div>
+//         )
+//     }
     
-    export default Collection;
+//     export default Collection;

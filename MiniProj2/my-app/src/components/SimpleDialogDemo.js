@@ -24,25 +24,3 @@ export function SimpleDialog(props) {
         </Dialog>
     );
 }
-
-
-export default function SimpleDialogDemo() {
-
-    const [open, setOpen] = React.useState(false);
-
-    return (
-        <div>
-
-            <Button variant="outlined" onClick={() => setOpen(true)}>
-                Open simple dialog
-            </Button>
-
-            <SimpleDialog
-                open={open}
-                onClose={() => setOpen(false)}
-                title="My Simple Dialog"
-                content="Message text shows here to inform the user what their options are"
-                />
-        </div>
-    );
-}

@@ -9,19 +9,40 @@ import '../App.css';
 import games from '../games.json';
 
 
-const GamesList = () => {
-    const [data, setData] = useState(games);
+function GamesList(props) {
+    const [open, setOpen] = useState(false)
+    const [currentGame, setCurrentGame] = useState({})
+    
+    const handleButton = (thisGame) => {
+        setCurrentGame(thisGame)
+        setOpen(true)
+    }
+
+    console.log(props)
     
 
     return(
         <div className="games-container">
-           {data.map((games) => (
-                <div key={games.id} className="games-div">
-                    <img src={games.thumbnail} alt="#"/>
-                    <h1>{games.title}</h1>
-                    <button>Show More</button>
-                </div>
-           ))}               
+  
+            {props.currentGame.map((game) => 
+                <PlayerCard 
+                    id={game.id} 
+                    name={game.title} 
+                    location={game.publisher} 
+                    buttonHandler={() => handleButton(game)} 
+                    image={game.thumbnail} />
+                )}
+
+        <SimpleDialog
+                open={open}
+                onClose={() => setOpen(false)}
+                title={currentGame.title}
+                sdescription={'Short Description: '+currentGame.short_description}
+                genre={'Genre: '+currentGame.genre}
+                publisher={'Publisher: '+currentGame.publisher}
+                developer={'Developer: '+currentGame.developer}
+                releasedate={'Release Date: '+currentGame.release_date}
+                />     
         </div>
     );
 }

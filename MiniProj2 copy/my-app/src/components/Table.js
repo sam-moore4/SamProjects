@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import '../App.css';
 import GamesList from './GamesList';
 import Filter from './Filter';
-import games from '../games.json';
 
 const Table = () => {
 
@@ -26,7 +25,7 @@ const Table = () => {
                 </div>
             </div>
 
-            { active ? <GamesList currentGame = {games} /> : <Filter />}
+            { active ? <GamesList /> : <Filter />}
             
 
         </div>

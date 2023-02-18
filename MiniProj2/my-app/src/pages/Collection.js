@@ -6,7 +6,7 @@ import {players} from "../components/PlayerList"
 // import DisplayPost from "../components/DisplayPost"
 
 
-function Posts(){
+function Collection(){
 
     const [arr, setArr] = useState(players)
 
@@ -24,4 +24,4 @@ function Posts(){
         )
     }
     
-    export default Posts
+    export default Collection;

@@ -3,7 +3,7 @@ import ClockDisplay from '../components/Clock';
 import Emoji from '../components/Emoji';
 import { EmojiProvider } from '../context/EmojiContext';
 
-function LabExercises() {
+function Login() {
     return (
         <div class='App'>
             <EmojiProvider>
@@ -16,4 +16,4 @@ function LabExercises() {
     )
 }
 
-export default LabExercises;
+export default Login;

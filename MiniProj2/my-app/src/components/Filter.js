@@ -14,18 +14,7 @@ const Filter = () => {
             (game.genre === selectedGenre || selectedGenre == 'All') && (game.release_date.includes(selectedYear) || selectedYear == 'All')
         
         )
-    // function HandleFilter() {
-    //     const genreFilter = games.filter( game => game.genre === selectedGenre)
-    //     console.log(genreFilter)
-    // }
-
-    const genreFilter = selectedGenre == 'All' ? games : games.filter( game => game.genre === selectedGenre)
-        console.log(genreFilter)
-
-    const yearFilter = selectedYear == 'All' ? games : games.filter(game => game.release_date.includes(selectedYear))
-        console.log(selectedYear)
-
-
+    
 
     return(
         <div className="standings-container">

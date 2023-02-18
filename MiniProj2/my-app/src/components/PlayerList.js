@@ -4,49 +4,7 @@ import { Grid } from '@mui/material';
 import {useState, useEffect} from 'react';
 import { SimpleDialog } from './SimpleDialogDemo';
 import PlayerCard from './PlayerCard';
-
-export const players = [
-    {
-        id: 1,
-        name: 'Nikola Jokic',
-        location: 'Denver'
-    },
-    {
-        id: 2,
-        name: 'Joel Embiid',
-        location: 'Philadelphia'
-    },
-    {
-        id: 3,
-        name: 'Giannis Antentekounpo',
-        location: 'Milwaukee'
-    },
-    {
-        id: 4,
-        name: 'Kyrie Irving',
-        location: 'Brooklyn'
-    },
-    {
-        id: 5,
-        name: 'Devin Booker',
-        location: 'Phoenix'
-    },
-    {
-        id: 6,
-        name: 'Jimmy Butler',
-        location: 'Miami'
-    },
-    {
-        id: 7,
-        name: 'Aaron Gordon',
-        location: 'Denver'
-    },
-    {
-        id: 8,
-        name: 'Luka Doncic',
-        location: 'Dallas'
-    }  
-]
+import games from "../games.json";
 
 function PlayerList(props) {
         const [open, setOpen] = useState(false)

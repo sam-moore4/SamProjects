@@ -8,7 +8,8 @@ const Table = () => {
 
     
     const [active, setActive] = useState(true);
-    
+
+       
 
 
 
@@ -28,7 +29,6 @@ const Table = () => {
 
             { active ? <GamesList currentGame = {games} /> : <Filter />}
             
-
         </div>
     );
 };
